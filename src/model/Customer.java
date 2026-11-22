@@ -1,3 +1,4 @@
+package model;
 public class Customer {
     private String customerId;
     private String name;

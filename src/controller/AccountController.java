@@ -1,6 +1,14 @@
+package controller;
+import view.AccountView;
+import model.Transaction;
+import model.Account;
 import javafx.scene.control.Alert;
+import dao.AccountDAO;
+import dao.TransactionDAO;
 
 public class AccountController {
+    private AccountDAO accountDAO = new AccountDAO();
+private TransactionDAO transactionDAO = new TransactionDAO();
 
     private AccountView accountView;
     private Account account;

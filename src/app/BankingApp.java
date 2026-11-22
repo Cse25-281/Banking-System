@@ -1,19 +1,23 @@
+package app;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import controller.LoginController;
+import view.LoginView;
+import dao.DatabaseConnection;
 
 public class BankingApp extends Application {
 
     @Override
     public void start(Stage stage) {
 
-        LoginView loginView = new LoginView();
+        DatabaseConnection.initializeDatabase();
 
-        LoginController loginController =
-                new LoginController(loginView);
+        LoginView loginView = new LoginView();
+        LoginController loginController = new LoginController(loginView);
 
         Scene scene = new Scene(loginView, 500, 400);
-
         stage.setTitle("Banking System");
         stage.setScene(scene);
         stage.show();

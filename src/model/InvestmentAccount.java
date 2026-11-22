@@ -1,3 +1,4 @@
+package model;
 public class InvestmentAccount extends Account {
     private double interestRate;
 

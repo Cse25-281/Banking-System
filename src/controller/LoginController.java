@@ -1,3 +1,5 @@
+package controller;
+import view.LoginView;
 import javafx.scene.control.Alert;
 
 public class LoginController {
